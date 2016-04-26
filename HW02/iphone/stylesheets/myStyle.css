@@ -1,0 +1,233 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby23/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/myStyle.scss */
+body {
+  background-image: url(images/iphone_bg.jpg);
+  background-repeat: no-repeat;
+}
+
+/* line 14, ../sass/myStyle.scss */
+.iphone {
+  position: relative;
+  border: 4.05405px solid #dcdcdc;
+  background-color: #f5f5f5;
+  top: 0px;
+  left: 10px;
+  width: 250px;
+  height: 513.51351px;
+  border-radius: 33.78378px;
+}
+
+/* line 25, ../sass/myStyle.scss */
+.screen {
+  position: absolute;
+  top: 55.40541px;
+  left: 10.13514px;
+  width: 226.35135px;
+  height: 398.64865px;
+  background-color: #808080;
+  border: 1.35135px solid black;
+  background: linear-gradient(#dcdcdc, #808080);
+}
+
+/* line 36, ../sass/myStyle.scss */
+.top1 {
+  position: absolute;
+  top: 10.13514px;
+  left: 125.67568px;
+  width: 5.40541px;
+  height: 5.40541px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* line 46, ../sass/myStyle.scss */
+.top2 {
+  position: absolute;
+  top: 23.64865px;
+  left: 87.83784px;
+  width: 8.10811px;
+  height: 8.10811px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* line 56, ../sass/myStyle.scss */
+.top3 {
+  position: absolute;
+  top: 27.02703px;
+  left: 110.13514px;
+  width: 33.78378px;
+  height: 2.7027px;
+  background-color: black;
+  border-radius: 20%;
+}
+
+/* line 66, ../sass/myStyle.scss */
+.circle_btn2 {
+  position: absolute;
+  bottom: 14.18919px;
+  left: 110.13514px;
+  background: white;
+  width: 30.40541px;
+  height: 30.40541px;
+  border-radius: 50%;
+}
+
+/* line 76, ../sass/myStyle.scss */
+.circle_btn {
+  position: absolute;
+  bottom: 10.81081px;
+  left: 106.75676px;
+  width: 37.16216px;
+  height: 37.16216px;
+  border-radius: 50%;
+  background: linear-gradient(150deg, #696969, #dcdcdc, #696969);
+}
+
+/* line 86, ../sass/myStyle.scss */
+.left_btn1 {
+  position: absolute;
+  left: -5.40541px;
+  top: 62.16216px;
+  background-color: #dcdcdc;
+  width: 3.37838px;
+  height: 16.89189px;
+}
+
+/* line 95, ../sass/myStyle.scss */
+.left_btn2 {
+  position: absolute;
+  left: -5.40541px;
+  top: 101.35135px;
+  background-color: #dcdcdc;
+  width: 3.37838px;
+  height: 31.75676px;
+}
+
+/* line 104, ../sass/myStyle.scss */
+.left_btn3 {
+  position: absolute;
+  left: -5.40541px;
+  top: 141.89189px;
+  background-color: #dcdcdc;
+  width: 3.37838px;
+  height: 31.75676px;
+}
+
+/* line 113, ../sass/myStyle.scss */
+.right_btn1 {
+  position: absolute;
+  right: -5.40541px;
+  top: 97.2973px;
+  background-color: #dcdcdc;
+  width: 3.37838px;
+  height: 35.13514px;
+}
+
+/* line 122, ../sass/myStyle.scss */
+.skyline1 {
+  position: absolute;
+  left: -4.05405px;
+  top: 35.81081px;
+  background-color: #a9a9a9;
+  width: 4.05405px;
+  height: 10.13514px;
+}
+
+/* line 131, ../sass/myStyle.scss */
+.skyline2 {
+  position: absolute;
+  right: -4.05405px;
+  top: 35.81081px;
+  background-color: #a9a9a9;
+  width: 4.05405px;
+  height: 10.13514px;
+}
+
+/* line 140, ../sass/myStyle.scss */
+.skyline3 {
+  position: absolute;
+  left: -4.05405px;
+  bottom: 35.81081px;
+  background-color: #a9a9a9;
+  width: 4.05405px;
+  height: 10.13514px;
+}
+
+/* line 149, ../sass/myStyle.scss */
+.skyline4 {
+  position: absolute;
+  right: -4.05405px;
+  bottom: 35.81081px;
+  background-color: #a9a9a9;
+  width: 4.05405px;
+  height: 10.13514px;
+}

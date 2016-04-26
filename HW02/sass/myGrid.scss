@@ -1,0 +1,50 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@mixin col-md($total-number) {
+    @for $number from 1 through $total-number {
+        .col-md-#{$number} {
+            width:calc(100% * #{$number} /12);
+        }
+    }
+}
+
+@mixin col-sm($total-number) {
+    @for $number from 1 through $total-number {
+        .col-sm-#{$number} {
+            width:calc(100% * #{$number} /12);
+        }
+    }
+}
+
+@mixin col-xs($total-number) {
+    @for $number from 1 through $total-number {
+        .col-xs-#{$number} {
+            width:calc(100% * #{$number} /12);
+        }
+    }
+}
+
+@media screen and ( min-width:1000px) {
+    @include col-md(12);
+}
+
+@media screen and ( min-width:550px) and ( max-width:1000px) {
+    @include col-sm(12);
+}
+
+@media screen and ( max-width:550px) {
+    @include col-xs(12);
+}
+
+.box {
+    background-color: #ddd;
+    height: 100px;
+}
+
+[class^=col] {
+    margin: 5px;
+}
