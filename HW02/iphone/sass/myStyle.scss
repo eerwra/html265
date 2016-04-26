@@ -1,0 +1,156 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+body {
+    background-image: url(images/iphone_bg.jpg);
+    background-repeat: no-repeat;
+}
+
+$iphoneWidth:250px;
+$iphoneHeight:760 / 370 * $iphoneWidth;
+.iphone {
+    position: relative;
+    border: $iphoneWidth * 6 / 370 solid #dcdcdc;
+    background-color: #f5f5f5;
+    top: 0px;
+    left: 10px;
+    width: $iphoneWidth;
+    height: $iphoneHeight;
+    border-radius: $iphoneHeight * 50 / 760;
+}
+
+.screen {
+    position: absolute;
+    top: $iphoneHeight * 82 / 760;
+    left: $iphoneWidth * 15 / 370;
+    width: $iphoneWidth * 335 / 370;
+    height: $iphoneHeight * 590 / 760;
+    background-color: #808080;
+    border: $iphoneWidth * 2 / 370 solid black;
+    background: linear-gradient(#dcdcdc, #808080);
+}
+
+.top1 {
+    position: absolute;
+    top: $iphoneHeight * 15 /760;
+    left: $iphoneWidth * 186 / 370;
+    width: $iphoneWidth * 8 / 370;
+    height: $iphoneHeight * 8 /760;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.top2 {
+    position: absolute;
+    top: $iphoneHeight * 35 /760;
+    left: $iphoneWidth * 130 / 370;
+    width: $iphoneWidth * 12 / 370;
+    height: $iphoneHeight * 12 /760;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.top3 {
+    position: absolute;
+    top: $iphoneHeight * 40 /760;
+    left: $iphoneWidth * 163 / 370;
+    width: $iphoneWidth * 50 / 370;
+    height: $iphoneHeight * 4 /760;
+    background-color: black;
+    border-radius: 20%;
+}
+
+.circle_btn2 {
+    position: absolute;
+    bottom: $iphoneHeight * 21 /760;
+    left: $iphoneWidth * 163 / 370;
+    background: white;
+    width: $iphoneWidth * 45 / 370;
+    height: $iphoneHeight * 45 /760;
+    border-radius: 50%;
+}
+
+.circle_btn {
+    position: absolute;
+    bottom: $iphoneHeight * 16 /760;
+    left: $iphoneWidth * 158 / 370;
+    width: $iphoneWidth * 55 / 370;
+    height: $iphoneHeight * 55 /760;
+    border-radius: 50%;
+    background: linear-gradient(150deg, #696969, #dcdcdc, #696969);
+}
+
+.left_btn1 {
+    position: absolute;
+    left: $iphoneWidth * -8 / 370;
+    top: $iphoneHeight * 92 /760;
+    background-color: #dcdcdc;
+    width: $iphoneWidth * 5 / 370;
+    height: $iphoneHeight * 25 /760;
+}
+
+.left_btn2 {
+    position: absolute;
+    left: $iphoneWidth * -8 / 370;
+    top: $iphoneHeight * 150 /760;
+    background-color: #dcdcdc;
+    width: $iphoneWidth * 5 / 370;
+    height: $iphoneHeight * 47 /760;
+}
+
+.left_btn3 {
+    position: absolute;
+    left: $iphoneWidth * -8 / 370;
+    top: $iphoneHeight * 210 /760;
+    background-color: #dcdcdc;
+    width: $iphoneWidth * 5 / 370;
+    height: $iphoneHeight * 47 /760;
+}
+
+.right_btn1 {
+    position: absolute;
+    right: $iphoneWidth * -8 / 370;
+    top: $iphoneHeight * 144 /760;
+    background-color: #dcdcdc;
+    width: $iphoneWidth * 5 / 370;
+    height: $iphoneHeight * 52 /760;
+}
+
+.skyline1 {
+    position: absolute;
+    left: $iphoneWidth * -6 / 370;
+    top: $iphoneHeight * 53 /760;
+    background-color: #a9a9a9;
+    width: $iphoneWidth * 6 / 370;
+    height: $iphoneHeight * 15 /760;
+}
+
+.skyline2 {
+    position: absolute;
+    right: $iphoneWidth * -6 / 370;
+    top: $iphoneHeight * 53 /760;
+    background-color: #a9a9a9;
+    width: $iphoneWidth * 6 / 370;
+    height: $iphoneHeight * 15 /760;
+}
+
+.skyline3 {
+    position: absolute;
+    left: $iphoneWidth * -6 / 370;
+    bottom: $iphoneHeight * 53 /760;
+    background-color: #a9a9a9;
+    width: $iphoneWidth * 6 / 370;
+    height: $iphoneHeight * 15 /760;
+}
+
+.skyline4 {
+    position: absolute;
+    right: $iphoneWidth * -6 / 370;
+    bottom: $iphoneHeight * 53 /760;
+    background-color: #a9a9a9;
+    width: $iphoneWidth * 6 / 370;
+    height: $iphoneHeight * 15 /760;
+}
