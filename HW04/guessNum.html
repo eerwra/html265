@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+    var randomArray = [];
+    var notNumber = [
+        [],
+        [],
+        [],
+        []
+    ];
+    var okNumber = [-1, -1, -1, -1];
+
+    function getRandom(minNum, maxNum) { //取得 minNum(最小值) ~ maxNum(最大值) 之間的亂數
+        return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+    }
+
+    function getRandomArray(minNum, maxNum, n) { //隨機產生不重覆的n個數字
+        var rdmArray = [n]; //儲存產生的陣列
+
+        for (var i = 0; i < n; i++) {
+            if (okNumber[i] != -1) {
+                rdmArray[i] = okNumber[i];
+                continue;
+            }
+
+            var rdm = 0; //暫存的亂數
+            do {
+                var exist = false; //此亂數是否已存在
+                rdm = getRandom(minNum, maxNum); //取得亂數
+
+                //檢查亂數是否存在於陣列中，若存在則繼續回圈
+                if (rdmArray.indexOf(rdm) != -1) {
+                    exist = true;
+                }
+
+                //檢查亂數是否存在於猜錯的數字中，若存在則繼續回圈
+                alert("i=" + i + ", " + notNumber[i]);
+                if (notNumber[i].indexOf(rdm) != -1) {
+                    exist = true;
+                }
+
+            } while (exist); //產生沒出現過的亂數時離開迴圈
+
+            rdmArray[i] = rdm;
+        }
+        return rdmArray;
+    }
+
+    window.onload = init;
+
+    function init() {
+        genRandomNumber();
+        $("#guess").click(guessProcess);
+        $("#restart").click(genRandomNumber);
+    }
+
+    function genRandomNumber() {
+        notNumber = [
+            [],
+            [],
+            [],
+            []
+        ];
+        okNumber = [-1, -1, -1, -1];
+        rdmArray = getRandomArray(0, 9, 4);
+        $(".process").text("");
+
+        for (var aryIndex = 0; aryIndex < rdmArray.length; aryIndex++) {
+            $(".box" + (aryIndex + 1)).text(rdmArray[aryIndex]);
+        }
+        randomArray = rdmArray;
+    }
+
+    function guessProcess() {
+        //$(".process").append("<div class='data'>步驟</div><div class='data'>Input</div><div class='data'>Result</div>");
+
+        var count = 0;
+
+        while (true) {
+            var rdmArray = getRandomArray(0, 9, 4);
+            var isOK = isGuessOK(rdmArray, count);
+            if (isOK) {
+                break;
+            }
+            count++;
+        }
+    }
+
+    function isGuessOK(rdmArray, count) {
+        var guessString = "";
+        var a = 0;
+        var b = 0;
+        for (var aryIndex = 0; aryIndex < rdmArray.length; aryIndex++) {
+            guessString += rdmArray[aryIndex];
+            if (rdmArray[aryIndex] == randomArray[aryIndex]) {
+                okNumber[aryIndex] = rdmArray[aryIndex];
+                a++;
+            } else if (randomArray.indexOf(rdmArray[aryIndex]) > -1) {
+                b++;
+            } else {
+                notNumber[aryIndex].push(rdmArray[aryIndex]);
+            }
+        }
+        $(".process").append("<div class='data'>Step:" + count + "=></div><div class='data'>" + guessString + "   :</div><div class='data'>" + a + "A" + b + "B</div><br>");
+        if (a === 4) {
+            $(".process").append("OK!!<br>");
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    </script>
+    <style>
+    div[class^=box] {
+        display: block;
+        float: left;
+        width: 100px;
+        height: 50px;
+        border: 2px dashed orange;
+        font-size: 40px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        clear: both;
+    }
+    
+    #guess,
+    #restart {
+        display: block;
+        width: 416px;
+    }
+    
+    .process {
+        width: 416px;
+        clear: both;
+    }
+    
+    .data {
+        float: left;
+        width: calc(100%/3);
+        background-color: lightgreen;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <input type="button" id="restart" value="重開一局">
+        <input type="button" id="guess" value="開始猜">
+        <div class="process">
+            <div class="data">步驟</div>
+            <div class="data">Input</div>
+            <div class="data">Result</div>
+        </div>
+    </div>
+</body>
+
+</html>
