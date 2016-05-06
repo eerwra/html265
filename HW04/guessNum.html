@@ -38,8 +38,12 @@
                     exist = true;
                 }
 
+                if (okNumber.indexOf(rdm) != -1) {
+                    exist = true;
+                }
+
+                //$(".notNumber").append("i=" + i + "---- " + notNumber[i] + "<br>");
                 //檢查亂數是否存在於猜錯的數字中，若存在則繼續回圈
-                alert("i=" + i + ", " + notNumber[i]);
                 if (notNumber[i].indexOf(rdm) != -1) {
                     exist = true;
                 }
@@ -48,6 +52,7 @@
 
             rdmArray[i] = rdm;
         }
+        //$(".notNumber").append("===========================================<br>");
         return rdmArray;
     }
 
@@ -69,6 +74,7 @@
         okNumber = [-1, -1, -1, -1];
         rdmArray = getRandomArray(0, 9, 4);
         $(".process").text("");
+        //$(".notNumber").text("");
 
         for (var aryIndex = 0; aryIndex < rdmArray.length; aryIndex++) {
             $(".box" + (aryIndex + 1)).text(rdmArray[aryIndex]);
@@ -166,6 +172,8 @@
             <div class="data">Input</div>
             <div class="data">Result</div>
         </div>
+        <!-- <div class="notNumber">
+        </div> -->
     </div>
 </body>
 
