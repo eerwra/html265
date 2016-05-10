@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>簡單便利貼</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <form>
+        <label for="note_color">便利貼顏色</label>
+        <select id="note_color">
+        </select>
+        <label for="note_text">記事內容:</label>
+        <input type="text" id="note_text">
+        <input type="button" id="add_button" value="新增">
+        <input type="button" id="clear_sel_button" value="刪除選擇的部份">
+        <input type="button" id="clear_button" value="刪除全部">
+    </form>
+    <ul id="stickies"></ul>
+</body>
+
+</html>
